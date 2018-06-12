@@ -29,7 +29,7 @@
         <output value="Принято, $UserName!"/>
     </input>
     
-    <input pattern="* пока *">
+    <input pattern="* пока|выход *">
         <var name="end_session" value="javascript: true"/>
         <output value="Ну пока, незнакомец!" if="empty($UserName)"/>
         <output value="Пока-пока, $UserName!"/>
