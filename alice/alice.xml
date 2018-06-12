@@ -22,7 +22,13 @@
             </input>
         </context>
     </input>
-
+    
+    <input pattern="[* (зови|называй) меня*] $Text">
+        <var name="UserName" value="cap($Text)" scope="user"/>
+        <output value="Хорошо, $UserName! Буду так вас называть."/>
+        <output value="Принято, $UserName!"/>
+    </input>
+    
     <input pattern="* пока *">
         <var name="end_session" value="javascript: true"/>
         <output value="Ну пока, незнакомец!" if="empty($UserName)"/>
